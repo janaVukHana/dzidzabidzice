@@ -1,0 +1,86 @@
+/* reset some backgrounds from style.css */
+.container {
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* styles for gallery */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerS {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.containerS::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-slides {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  /* box-shadow: 3px 3px 10px white; */
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.containerS button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: transparent;
+  z-index: 10001;
+  border: none;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.containerS button:hover {
+  opacity: 1;
+}
+
+button.left {
+  left: 3vw;
+}
+
+button.right {
+  right: 3vw;
+}

@@ -1,0 +1,420 @@
+/* google fonts: Dancing Script400 i 700 Lora 400 700 Roboto 100 400 700 */
+/* gootle fonts: 
+Montserrat 400 700            sans-serif
+Playfair Display 400 700      serif
+Amatic SC 400 700             cursive
+*/
+
+:root {
+  --level1: #c85c5c;
+  --level2: #f9975d;
+  --level3: #fbd148;
+  --level4: #b2ea70;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.5;
+  text-align: left;
+  letter-spacing: 5px;
+  margin: 2rem 0 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+  opacity: 0.8;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* custom classes: like bootstrap */
+.dark-section {
+  background-color: var(--level1);
+  color: #fff;
+}
+
+.light-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-section,
+.light-section {
+  padding: 4rem 0;
+}
+
+.inner-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+/* NAV BUTTONS */
+/* top left corner of the page */
+
+.nav-buttons {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  z-index: 10000;
+}
+
+.buttons-container {
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 1s;
+  box-shadow: 0px 10px 30px black;
+}
+
+.buttons-container button {
+  font-size: 2rem;
+  color: black;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+}
+
+button.close {
+  left: 25%;
+  transform: rotate(90deg);
+  transform-origin: top;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+/* add and remove class with javaScript */
+.rotate-buttons {
+  transform: rotate(-90deg);
+}
+
+/* CONTAINER SECTION  */
+
+.container {
+  /* because I have fixed nav */
+  padding-top: 4rem;
+  transition: 1s transform ease-out;
+  transform-origin: top left;
+  background-color: var(--level1);
+}
+
+/* HEADER SECTION */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1000;
+  padding: 1rem;
+  box-shadow: 0px 10px 30px black;
+  transition: 1s height;
+}
+
+.logo {
+  text-align: left;
+}
+
+.logo a {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  transition: 1s font-size;
+}
+
+.logo a:hover {
+  text-shadow: 2px 2px 5px black;
+}
+
+/* add/remove class with javaScript on scroll*/
+.shrink-logo {
+  font-size: 1.5rem !important;
+}
+.shrink-header {
+  height: 3rem !important;
+}
+
+/* styling all social icons on page same */
+.social-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.social-icons ul {
+  display: flex;
+}
+
+.social-icons a {
+  display: block;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  opacity: 0.7;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+}
+
+/* MAIN SECTION */
+
+/* TITLE SECTION */
+
+#title .col {
+  position: relative;
+}
+
+#title p {
+  font-size: 1.8rem;
+  font-family: 'Dancing Script';
+  text-align: left;
+}
+
+#title .col figure {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#title figure img {
+  max-width: 20rem;
+  transform: rotate(-15deg);
+}
+
+/* INSTAGRAM SECTION */
+
+#instagram-section {
+  /* section over phone img  */
+  position: relative;
+  z-index: 2;
+}
+
+#instagram-section figure {
+  margin: 0 0.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px black;
+}
+
+#instagram-section figure img {
+  padding-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+#instagram-section figcaption {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* WHAT-TO-EXPECT-SECTION */
+/* move icon in the middle/center */
+#what-to-expect .col {
+  padding: 0.5rem;
+}
+
+#what-to-expect svg {
+  display: block;
+  margin: 0 auto;
+}
+
+#what-to-expect h3 {
+  padding: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#what-to-expect .col p {
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* CONTACT SECTION */
+.contact-section iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+}
+
+.contact-section h2,
+.contact-section p {
+  text-align: left;
+}
+
+.contact-section p {
+  padding-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.contact-section svg {
+  margin-right: 1rem;
+}
+
+/* FOOTER SECTION*/
+
+footer {
+  padding: 1.5rem !important;
+  color: var(--level1);
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+footer .social-icons {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* NAV LINKS */
+/* located behind .container div */
+
+.nav-links {
+  position: fixed;
+  bottom: 0;
+  left: -200px;
+  transition: 0.5s all;
+}
+
+.nav-links ul {
+  margin-left: 1.2rem;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: var(--level1);
+  border: 1px solid var(--level1);
+  border-radius: 3px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: white;
+  border: 1px solid var(--level1);
+  background-color: var(--level1);
+}
+
+.nav-links li.home {
+  margin-left: 1rem;
+}
+.nav-links li.cakes {
+  margin-left: 2rem;
+}
+.nav-links li.muffins {
+  margin-left: 3rem;
+}
+
+.nav-links span {
+  padding-left: 1rem;
+}
+
+/* add and remove class to show/hide navigation links */
+/* maybe change class name latter */
+.show-nav {
+  transform: rotate(-30deg);
+}
+
+.show-links {
+  left: 0;
+  transition-delay: 0.5s;
+}
+
+/* 
+@MEDIA CHEETSHEET: TYPICAL DEVICE BREAKPOINTS 
+xs :: phones: 600px and down
+s :: portraits tablets and large phones: 600px and up
+m :: landscape tablets: 768px and up
+l :: laptops, desktops: 992px and up
+xl :: large laptops, desktops: 1200 up
+*/
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin-bottom: 1.5rem;
+  }
+
+  #title .col figure {
+    position: static;
+  }
+
+  #title figure img {
+    max-width: 12rem;
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
+  }
+}

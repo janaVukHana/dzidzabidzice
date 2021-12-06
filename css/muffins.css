@@ -1,0 +1,105 @@
+.container {
+  padding: 0;
+}
+
+.gallery-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  transition: 1s top;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  transition: 1s top;
+}
+
+.inner-right-slider {
+  height: 100%;
+  width: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rainbow {
+  background-image: url('../IMG/muffins/muffin_7.jpg');
+}
+
+.choco-muffins {
+  background-image: url('../IMG/muffins/muffin_8.jpg');
+}
+
+.black {
+  background-image: url('../IMG/muffins/muffin_9.jpg');
+}
+
+.food {
+  background-image: url('../IMG/muffins/muffin_5.jpeg');
+}
+
+.flowers {
+  background-image: url('../IMG/muffins/muffin_2.jpeg');
+}
+
+.girl {
+  background-image: url('../IMG/muffins/muffin_1.jpeg');
+}
+
+.gallery-container button {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background-color: white;
+  padding: 0.5rem;
+  border: 2px solid black;
+  transform: translate(0);
+}
+
+button {
+  opacity: 0.5;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button.up {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button.down {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
