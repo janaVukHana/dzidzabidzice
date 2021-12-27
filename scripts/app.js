@@ -30,6 +30,23 @@ const currentYear = new Date().getFullYear();
 
 year.textContent = currentYear;
 
+// form submit 
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(e) {
+    const div = document.createElement('div');
+    div.setAttribute('class', 'form-div');
+    div.innerHTML = 'Message send!';
+    document.body.append(div);
+
+    setTimeout(function() {
+        div.style.display = 'none';
+        form.reset();
+    }, 2000)
+
+
+    e.preventDefault();
+})
 
 
 
