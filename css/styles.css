@@ -386,7 +386,7 @@ footer .social-icons {
 /* test: delete bottom add top */
 .nav-links {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: -200px;
   transition: 0.5s all;
 }

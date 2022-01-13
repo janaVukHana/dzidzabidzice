@@ -22,24 +22,60 @@ buttonClose.addEventListener('click', function(e) {
 });
 
 // fix nav links position for mobile devices 
+window.addEventListener('load', () => {
+    //  when user click button 
+    // put this later in styles.css where it belongs 
+    document.querySelector('.wrapper').style.overflow = 'hidden';
 
-window.addEventListener('resize', (e) => {
     // window width and height
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    // document height 
-    const pageHeight = page.offsetHeight;
-    console.log(height, pageHeight);
-    
-    if(width <= 600) {
-        const position = pageHeight - height;
-        navLinksContainer.style.position = 'absolute';
-        navLinksContainer.style.bottom = position;
-        navLinksContainer.style.top = height;
-    } else if (width > 600) {
-        navLinksContainer.style.position = 'fixed';
-        navLinksContainer.style.bottom = '0';
-    }
-    
-    // window height 
+    const width = window.innerWidth; //number
+     const height = window.innerHeight; //number
+
+     const pageHeight = page.offsetHeight; //number
+     const linksHeight = navLinksContainer.offsetHeight; //number
+     
+     if(width <= 600) {
+         navLinksContainer.style.position = 'absolute';
+         navLinksContainer.style.top = String(height - linksHeight) + 'px';
+     } else if (width > 600) {
+         navLinksContainer.style.position = 'fixed';
+         navLinksContainer.style.top = String(height - linksHeight) + 'px';
+     }
 })
+
+window.addEventListener('resize', () => {
+    // window width and height
+    const width = window.innerWidth; //number
+     const height = window.innerHeight; //number
+
+     const pageHeight = page.offsetHeight; //number
+     const linksHeight = navLinksContainer.offsetHeight; //number
+     
+     if(width <= 600) {
+         navLinksContainer.style.position = 'absolute';
+         navLinksContainer.style.top = String(height - linksHeight) + 'px';
+     } else if (width > 600) {
+         navLinksContainer.style.position = 'fixed';
+         navLinksContainer.style.top = String(height - linksHeight) + 'px';
+     }
+})
+
+window.addEventListener('scroll', () => {
+    // window width and height
+    const width = window.innerWidth; //number
+     const height = window.innerHeight; //number
+
+     const pageHeight = page.offsetHeight; //number
+     const linksHeight = navLinksContainer.offsetHeight; //number
+
+     const distanceFromTopOfThePage = window.scrollY; //number
+
+    console.log(height - linksHeight + distanceFromTopOfThePage);
+
+     if(width <= 600) {
+        navLinksContainer.style.position = 'absolute';
+        navLinksContainer.style.top = String(height - linksHeight + distanceFromTopOfThePage) + 'px';
+    }
+})
+
+
