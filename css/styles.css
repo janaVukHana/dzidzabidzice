@@ -383,6 +383,7 @@ footer .social-icons {
 /* NAV LINKS */
 /* located behind .container div */
 
+/* test: delete bottom add top */
 .nav-links {
   position: fixed;
   bottom: 0;
@@ -397,9 +398,10 @@ footer .social-icons {
 .nav-links a {
   display: inline-block;
   padding: 0.5rem;
-  color: var(--level1);
   border: 1px solid var(--level1);
   border-radius: 3px;
+  margin: 3px 0;
+  color: var(--level1);
   font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;

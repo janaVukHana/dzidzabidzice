@@ -20,3 +20,26 @@ buttonClose.addEventListener('click', function(e) {
     page.classList.remove('show-nav');
     navLinksContainer.classList.remove('show-links')
 });
+
+// fix nav links position for mobile devices 
+
+window.addEventListener('resize', (e) => {
+    // window width and height
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    // document height 
+    const pageHeight = page.offsetHeight;
+    console.log(height, pageHeight);
+    
+    if(width <= 600) {
+        const position = pageHeight - height;
+        navLinksContainer.style.position = 'absolute';
+        navLinksContainer.style.bottom = position;
+        navLinksContainer.style.top = height;
+    } else if (width > 600) {
+        navLinksContainer.style.position = 'fixed';
+        navLinksContainer.style.bottom = '0';
+    }
+    
+    // window height 
+})
