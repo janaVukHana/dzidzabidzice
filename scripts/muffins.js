@@ -1,4 +1,5 @@
 // gallery image double slider
+console.log(window.outerHeight, window.outerHeight);
 
 const buttonDown = document.querySelector('.down');
 const buttonUp = document.querySelector('.up');
@@ -8,10 +9,10 @@ const rightSlide = document.querySelector('.right-slider');
 const numberOfSlides = document.querySelectorAll('.description').length-1;
 
 let index = 0;
-// What Brad Traversu use instead innerHeight? clientHeight ili tako nesto?
-let currentWindowHeight = window.innerHeight;
+// What Brad Traversu use instead outerHeight? clientHeight ili tako nesto?
+let currentWindowHeight = window.outerHeight;
 
-leftSlide.style.top = `-${numberOfSlides * window.innerHeight}px`;
+leftSlide.style.top = `-${numberOfSlides * window.outerHeight}px`;
 
 
 buttonUp.addEventListener('click', function() {
@@ -19,7 +20,7 @@ buttonUp.addEventListener('click', function() {
     // if(index > numberOfSlides) {
     //     index = 0;
     // }
-    // currentWindowHeight = window.innerHeight;
+    // currentWindowHeight = window.outerHeight;
     
     // rightSlide.style.top = `-${currentWindowHeight * index}px`;
     // leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`;  
@@ -31,7 +32,7 @@ buttonDown.addEventListener('click', function() {
     // if(index < 0) {
     //     index = numberOfSlides;
     // }
-    // currentWindowHeight = window.innerHeight;
+    // currentWindowHeight = window.outerHeight;
 
     // rightSlide.style.top = `-${currentWindowHeight * index}px`;
     // leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`; 
@@ -50,7 +51,7 @@ function changeSlide(direction) {
             index = numberOfSlides;
         }
     }
-    currentWindowHeight = window.innerHeight;
+    currentWindowHeight = window.outerHeight;
 
     rightSlide.style.top = `-${currentWindowHeight * index}px`;
     leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`; 
