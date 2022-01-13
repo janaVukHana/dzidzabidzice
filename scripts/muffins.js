@@ -9,9 +9,9 @@ const numberOfSlides = document.querySelectorAll('.description').length-1;
 
 let index = 0;
 // What Brad Traversu use instead innerHeight? clientHeight ili tako nesto?
-let currentWindowHeight = window.innerHeight;
+let currentWindowHeight = leftSlide.offsetHeight;
 
-leftSlide.style.top = `-${numberOfSlides * window.innerHeight}px`;
+leftSlide.style.top = `-${numberOfSlides * leftSlide.offsetHeight}px`;
 
 
 buttonUp.addEventListener('click', function() {
@@ -19,7 +19,7 @@ buttonUp.addEventListener('click', function() {
     // if(index > numberOfSlides) {
     //     index = 0;
     // }
-    // currentWindowHeight = window.innerHeight;
+    // currentWindowHeight = leftSlide.offsetHeight;
     
     // rightSlide.style.top = `-${currentWindowHeight * index}px`;
     // leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`;  
@@ -31,7 +31,7 @@ buttonDown.addEventListener('click', function() {
     // if(index < 0) {
     //     index = numberOfSlides;
     // }
-    // currentWindowHeight = window.innerHeight;
+    // currentWindowHeight = leftSlide.offsetHeight;
 
     // rightSlide.style.top = `-${currentWindowHeight * index}px`;
     // leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`; 
@@ -50,19 +50,22 @@ function changeSlide(direction) {
             index = numberOfSlides;
         }
     }
-    currentWindowHeight = window.innerHeight;
+    currentWindowHeight = leftSlide.offsetHeight;
 
     rightSlide.style.top = `-${currentWindowHeight * index}px`;
     leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`; 
 
 }
 
-// testing for mobile - my personal mobile
+// testing for mobile - my personal mobile 
+// address bar on mobile is making problem
 window.addEventListener("load",function() {
     setTimeout(function(){
         // This hides the address bar:
-        window.scrollTo(0, window.innerHeight);
+        window.scrollTo(0, leftSlide.offsetHeight);
     }, 0);
 });
+
+
 
 
