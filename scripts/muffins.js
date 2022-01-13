@@ -1,5 +1,4 @@
 // gallery image double slider
-console.log(window.innerHeight, window.innerHeight);
 
 const buttonDown = document.querySelector('.down');
 const buttonUp = document.querySelector('.up');
@@ -57,5 +56,13 @@ function changeSlide(direction) {
     leftSlide.style.top = `-${(numberOfSlides - index) * currentWindowHeight}px`; 
 
 }
+
+// testing for mobile - my personal mobile
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
 
 
