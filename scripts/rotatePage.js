@@ -23,9 +23,6 @@ buttonClose.addEventListener('click', function(e) {
 
 // fix nav links position for mobile devices 
 window.addEventListener('load', () => {
-    //  when user click button 
-    // put this later in styles.css where it belongs 
-    document.querySelector('.wrapper').style.overflow = 'hidden';
 
     // window width and height
     const width = window.innerWidth; //number

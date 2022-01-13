@@ -137,6 +137,9 @@ button:hover {
 }
 
 /* CONTAINER SECTION  */
+.wrapper {
+  overflow: hidden;
+}
 
 .container {
   /* because I have fixed nav */
